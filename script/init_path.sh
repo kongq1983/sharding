@@ -21,6 +21,7 @@ mkdir -p /mysql/slave/conf
 
 mkdir -p /mysql/common/data
 # cp -fr /mysql/common/data/mysql/* .
+# cp -fr /mysql/23306/data/* .
 
 # 目录访问权限
 chmod -R 777 /mysql/13306/data

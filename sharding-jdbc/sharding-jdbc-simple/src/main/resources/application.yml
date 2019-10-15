@@ -7,8 +7,9 @@ server:
 
 spring:
   profiles:
-    active: home
+#    active: home
 #    active: company
+    active: company_rw
 
 
 
