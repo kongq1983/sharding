@@ -5,6 +5,7 @@ import com.kq.entity.Account;
 import com.kq.sharding.mapper.AccountMapper;
 import com.kq.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,6 +24,12 @@ public class AccountController {
 
     @Autowired
     private AccountMapper accountDao;
+
+
+    @RequestMapping("/{id}")
+    public Account list(@PathVariable("id") Long id){
+        return accountDao.getAccount(id);
+    }
 
     @RequestMapping("/list")
     public List<Account> list(){

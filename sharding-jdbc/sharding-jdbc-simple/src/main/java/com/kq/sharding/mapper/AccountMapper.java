@@ -23,4 +23,7 @@ public interface AccountMapper {
     @Insert("insert into t_account(id,username,phone,createTime) values(#{id},#{username},#{phone},#{createTime})")
     void addAccount(Account o);
 
+    @Select("select id,username,phone,province,createTime from t_account where id=#{id}")
+    public Account getAccount(Long id);
+
 }
