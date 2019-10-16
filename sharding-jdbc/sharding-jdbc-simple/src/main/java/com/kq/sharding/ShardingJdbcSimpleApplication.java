@@ -10,6 +10,7 @@ public class ShardingJdbcSimpleApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(ShardingJdbcSimpleApplication.class, args);
+        System.out.println(context);
     }
 
 }
