@@ -47,8 +47,10 @@ sharding:
              actual-data-nodes: ms_ds$->{0..1}.account_$->{0..1}
              database-strategy:
                standard: 
-                 sharding-column: createtime
-                 preciseAlgorithmClassName: com.kq.sharding.algorithm.OrderTimePreciseShardingAlgorithm
+                 sharding-column: province
+                 preciseAlgorithmClassName: com.kq.sharding.algorithm.ProvincePreciseShardingAlgorithm
+#                 sharding-column: createtime
+#                 preciseAlgorithmClassName: com.kq.sharding.algorithm.OrderTimePreciseShardingAlgorithm
                #inline:
                  #sharding-column: customer_id
                  #algorithm-expression: ds$->{customer_id % 2}
@@ -56,7 +58,7 @@ sharding:
                inline:
                  sharding-column: id
                  algorithm-expression: account_$->{id % 2}
-#             keyGeneratorColumnName: order_id #自己注释
+             keyGeneratorColumnName: id #自己注释
 #      masterslave:
          master-slave-rules:
            ms_ds0:
