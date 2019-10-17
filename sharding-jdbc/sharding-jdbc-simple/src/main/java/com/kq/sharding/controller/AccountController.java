@@ -46,8 +46,9 @@ public class AccountController {
         } else {
             account.setCreateTime(new Date());
         }
-
-        accountDao.addAccount(account);
+        // 没有插入ID
+        accountDao.addAccountNoId(account);
+//        accountDao.addAccount(account);
 
         return "ok";
     }
