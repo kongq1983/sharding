@@ -41,11 +41,11 @@ public class AccountController {
     public String add(Account account){
 
 
-        if(account.getId().intValue()<10000) {
-            account.setCreateTime(DateUtil.getDate(2018));
-        } else {
-            account.setCreateTime(new Date());
-        }
+//        if(account.getId().intValue()<10000) {
+//            account.setCreateTime(DateUtil.getDate(2018));
+//        } else {
+//            account.setCreateTime(new Date());
+//        }
         // 没有插入ID
         accountDao.addAccountNoId(account);
 //        accountDao.addAccount(account);
